@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Select file browser method"
+        android:textSize="18dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/fldrChkTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/folders"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <CheckBox
+            android:id="@+id/fldrChkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/fldrChkTxt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/fldrChkTxt" />
+
+        <TextView
+            android:id="@+id/fileChkTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/fldrChkTxt"
+            android:text="@string/files"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <CheckBox
+            android:id="@+id/fileChkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/fileChkTxt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/fileChkTxt" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1">
+
+        <Button
+            android:id="@+id/local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Local File Select"
+            android:textSize="18dp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/ftpfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/local"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="FTP File Select"
+            android:textSize="18dp"></Button>
+
+
+        <Button
+            android:id="@+id/ftpDnld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ftpfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:onClick="getfile"
+            android:text="FTP File Download"
+            android:textSize="18dp"></Button>
+
+        <ScrollView
+            android:id="@+id/mSvMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/ftpDnld">
+
+            <TextView
+                android:id="@+id/msgFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textStyle="bold"
+                android:typeface="normal" />
+        </ScrollView>
+
+    </RelativeLayout>
+</LinearLayout>
